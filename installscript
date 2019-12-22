@@ -53,13 +53,14 @@ echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo 'Install fnm node version manager'
+echo 'Install nvm (node version manager)'
 echo '-----------'
-brew install Schniz/tap/fnm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
-fnm install 12
-fnm default $(node -v)
-fnm install 8
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+nvm install stable
 
 echo 'Install pkg-config'
 echo '------------------'
