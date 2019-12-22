@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/okaufmann/.oh-my-zsh
+export ZSH=/Users/tobiaszumbrunnen/.oh-my-zsh
 
 # Setup xdebug
 export XDEBUG_CONFIG="idekey=VSCODE"
@@ -11,7 +11,7 @@ export XDEBUG_CONFIG="idekey=VSCODE"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="remy"
-DEFAULT_USER="okaufmann"
+DEFAULT_USER="tobiaszumbrunnen"
 
 # CONFIG SPACESHIP
 # based on https://gist.github.com/PierreThiollent/9087a26d56e0704c263baf7e1a5f3827
@@ -86,6 +86,7 @@ SPACESHIP_GIT_STATUS_SHOW="false"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    git-flow
     laravel5
     yarn
     npm
@@ -93,6 +94,10 @@ plugins=(
     z
     artisan
     colorize
+    docker
+    ng
+    osx
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -129,7 +134,7 @@ unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Enable autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.dotfiles/shell/hub.bash_completion.sh
 
 #set numeric keys
