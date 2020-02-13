@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo 'Install android sdk & related stuff'
+echo '-----------------'
+
+brew install ant
+brew install maven
+brew install gradle
+brew cask install android-sdk
+brew cask install android-ndk
+brew cask install android-platform-tools
+
+echo '-----------------'
