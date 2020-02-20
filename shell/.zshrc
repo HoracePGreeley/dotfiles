@@ -198,4 +198,7 @@ export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/build-tools/19.1.0:$PATH
 
-$ANDROID_HOME/tools/bin/sdkmanager
+export JAVA_HOME=$(/usr/libexec/java_home)
+alias j13="export JAVA_HOME=`/usr/libexec/java_home -v 13`; java -version"
+alias j9="export JAVA_HOME=`/usr/libexec/java_home -v 9`; java -version"
+alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 8`; java -version"
