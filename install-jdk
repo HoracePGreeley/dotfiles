@@ -5,6 +5,7 @@ echo '-----------------'
 
 # to list available jdk, enter brew search jdk
 
+brew cask install adoptopenjdk8
 brew cask install adoptopenjdk9
 brew cask install adoptopenjdk13
 
