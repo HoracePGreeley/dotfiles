@@ -201,4 +201,8 @@ export PATH=$ANDROID_HOME/build-tools/19.1.0:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 alias j13="export JAVA_HOME=`/usr/libexec/java_home -v 13`; java -version"
 alias j9="export JAVA_HOME=`/usr/libexec/java_home -v 9`; java -version"
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 8`; java -version"
+alias j8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home; java -version"
+
+
+# edo
+alias ionic-ios="ionic cordova run ios --device --configuration=sierra --buildConfig=build.json"
