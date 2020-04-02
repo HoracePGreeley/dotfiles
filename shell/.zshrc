@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/tobiaszumbrunnen/.oh-my-zsh
 
+# zsh plugins exports
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+
 # Setup xdebug
 export XDEBUG_CONFIG="idekey=VSCODE"
 
@@ -98,6 +101,7 @@ plugins=(
     ng
     osx
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

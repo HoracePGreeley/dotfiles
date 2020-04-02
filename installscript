@@ -14,6 +14,8 @@ echo 'Installing zsh plugins'
 echo '------------'
 git clone https://github.com/jessarcher/zsh-artisan.git ~/.oh-my-zsh/custom/plugins/artisan
 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
 echo 'Create symlinks'
 echo '------------'
 
