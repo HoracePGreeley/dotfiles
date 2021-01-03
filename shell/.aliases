@@ -105,3 +105,6 @@ alias ocr='screencapture -i ~/tmp/screenshot.png && tesseract ~/tmp/screenshot.p
 
 # Scape webpage
 alias scrape="scrapeUrl"
+
+# Kubernetes
+alias kc="kubectl"
