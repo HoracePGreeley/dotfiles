@@ -10,6 +10,14 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/h
 # Setup xdebug
 export XDEBUG_CONFIG="idekey=VSCODE"
 
+HISTSIZE=2000
+SAVEHIST=2000
+HISTFILE=~/.zsh_history
+setopt histignorespace
+setopt hist_ignore_all_dups
+setopt append_history
+setopt share_history
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
