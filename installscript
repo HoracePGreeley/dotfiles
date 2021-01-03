@@ -169,7 +169,11 @@ echo 'Install zsh-autosuggestions'
 echo '---------------------------'
 brew install zsh-autosuggestions
 
-echo 'Install zsh-autosuggestions'
+echo 'Install zsh-syntax-highlighting'
+echo '---------------------------'
+brew install zsh-syntax-highlighting
+
+echo 'Install prettyping'
 echo '---------------------------'
 brew install prettyping
 
