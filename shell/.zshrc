@@ -216,5 +216,7 @@ alias j9="export JAVA_HOME=`/usr/libexec/java_home -v 9`; java -version"
 alias j8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home; java -version"
 
 
-# edo
-alias ionic-ios="ionic cordova run ios --device --configuration=sierra --buildConfig=build.json"
+
+# python environment manager
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
