@@ -228,6 +228,14 @@ echo '---------------------'
 cgr laravel/valet
 valet install
 
+echo 'Install kubectl'
+echo '--------------'
+brew install kubectl
+
+echo 'Install kubectx'
+echo '--------------'
+brew install kubectx
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
