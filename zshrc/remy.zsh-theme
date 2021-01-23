@@ -105,11 +105,59 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
+prompt_kubecontext() {
+  # command to create a context: kc config set-context monitoring --cluster=k8s-keen-napier --namespace=monitoring --user=k8s-keen-napier-admin
+  if [[ $(kubectl config current-context) == *"sonarqube"* ]]; then
+      if [[ $(kubectl config current-context) == $(kubens -c) ]]; then
+        prompt_segment magenta black "\u2638 `kubectl config current-context`"
+      else
+        prompt_segment magenta black "\u2638 `kubectl config current-context`/`kubens -c`"
+      fi
+  elif [[ $(kubectl config current-context) == *"monitoring"* ]]; then
+      if [[ $(kubectl config current-context) == $(kubens -c) ]]; then
+        prompt_segment green black "\u2638 `kubectl config current-context`"
+      else
+        prompt_segment green black "\u2638 `kubectl config current-context`/`kubens -c`"
+      fi
+  elif [[ $(kubectl config current-context) == *"testing"* ]]; then
+      if [[ $(kubectl config current-context) == $(kubens -c) ]]; then
+        prompt_segment green black "\u2638 `kubectl config current-context`"
+      else
+        prompt_segment green black "\u2638 `kubectl config current-context`/`kubens -c`"
+      fi
+  elif [[ $(kubectl config current-context) == *"staging"* ]]; then
+      if [[ $(kubectl config current-context) == $(kubens -c) ]]; then
+        prompt_segment cyan black "\u2638 `kubectl config current-context`"
+      else
+        prompt_segment cyan black "\u2638 `kubectl config current-context`/`kubens -c`"
+      fi
+  elif [[ $(kubectl config current-context) == *"app-stage"* ]]; then
+      if [[ $(kubectl config current-context) == $(kubens -c) ]]; then
+        prompt_segment cyan black "\u2638 `kubectl config current-context`"
+      else
+        prompt_segment cyan black "\u2638 `kubectl config current-context`/`kubens -c`"
+      fi
+  elif [[ $(kubectl config current-context) == *"default"* ]]; then
+      if [[ $(kubectl config current-context) == $(kubens -c) ]]; then
+        prompt_segment magenta black "\u2638 `kubectl config current-context`"
+      else
+        prompt_segment magenta black "\u2638 `kubectl config current-context`/`kubens -c`"
+      fi
+  elif [[ $(kubectl config current-context) == *"production"* ]]; then
+      if [[ $(kubectl config current-context) == $(kubens -c) ]]; then
+        prompt_segment red yellow "\u2638 `kubectl config current-context`"
+      else
+        prompt_segment red yellow "\u2638 `kubectl config current-context`/`kubens -c`"
+      fi
+  fi
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_git
+  prompt_kubecontext
   prompt_dir
   prompt_end
 }
