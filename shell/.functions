@@ -313,3 +313,10 @@ function testChrome() {
     rm -rf $HOME/.config/chrome-test
     /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --console --no-first-run --user-data-dir=$HOME/.config/chrome-test --use-fake-device-for-media-stream --use-file-for-fake-video-capture=camfake.mjpeg --enable-logging --v=1 --vmodule="*third_party/libjingle/*=3,*=0"
 }
+
+
+# Kubernetes
+
+# Change namespace in the current context
+kcns() { kubectl config set-context --current --namespace="$1" }
+kcc() { kubectl config use-context $1 }
